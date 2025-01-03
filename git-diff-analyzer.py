@@ -1,3 +1,16 @@
+# generated with AI prompt (Claude 3.5 opus), no hand-editing:
+#
+# can you create a python script which pulls the diff via "git diff <target>" and
+# then analyzes this diff using chatgpt and claude APIs (default to claude) with 
+# this prompt: "ignoring the changes that were computer-generated, can you estimate
+# how long this took a human to write this code, assuming they appropriately used AI
+# to help them ? please go section by section." To reduce number of tokens, please
+# exclude package.json and package-lock.json when running the diff.
+
+# TODO: generalize removal of machine generated files/changes.
+
+# obviously, this is a non-prod prototype - don't use this without human supervision!
+
 import subprocess
 import os
 import argparse
